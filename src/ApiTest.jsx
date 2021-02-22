@@ -29,6 +29,7 @@ export default function ApiTest() {
   // https://api.rawg.io/api/games/{id}/suggested
   //hola
   //prova
+  //victor prova
 
   const loadGames = async () => {
     const response = await fetch(`${URL_BASE}/games?`);
