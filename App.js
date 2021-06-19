@@ -8,6 +8,7 @@ import GameList from "./screens/AllGames";
 import TrendingList from "./screens/TrendingList";
 import RecomendationsList from "./screens/RecomendationsList";
 import GameDetailsPage from "./screens/GameDetailsPage";
+import MainMenu from "./screens/MainMenu";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -18,11 +19,8 @@ export default function App() {
     <ModelProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={GameList}
-            options={{ title: 'Game list' }}
-          />
+        <Stack.Screen name="MainMenu" component={MainMenu} />
+          <Stack.Screen name="GameList" component={GameList}/>
           <Stack.Screen name="Library" component={Library} />
           <Stack.Screen name="GameDetailsPage" component={GameDetailsPage} />
           <Stack.Screen name="TrendingList" component={TrendingList} />
