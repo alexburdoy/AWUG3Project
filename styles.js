@@ -1,5 +1,9 @@
 import { StyleSheet } from "react-native";
 
+export const textPrimary = "#E6FF2E";
+export const textSecondary = "#9200FA";
+export const textTertiary = "#FFF";
+
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -42,5 +46,9 @@ export default StyleSheet.create({
   },
   label: {
     color: "#666",
+  },
+  image: {
+    height: 300,
+    width: 300,
   },
 });

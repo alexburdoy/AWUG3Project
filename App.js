@@ -19,12 +19,12 @@ export default function App() {
     <ModelProvider>
       <NavigationContainer>
         <Stack.Navigator>
-        <Stack.Screen name="MainMenu" component={MainMenu} />
-          <Stack.Screen name="GameList" component={GameList}/>
-          <Stack.Screen name="Library" component={Library} />
-          <Stack.Screen name="GameDetailsPage" component={GameDetailsPage} />
-          <Stack.Screen name="TrendingList" component={TrendingList} />
-          <Stack.Screen name="RecomendationsList" component={RecomendationsList} />
+        <Stack.Screen name="MainMenu" component={MainMenu} options={{headerShown: false}}/>
+          <Stack.Screen name="GameList" component={GameList} options={{headerShown: false}}/>
+          <Stack.Screen name="Library" component={Library} options={{headerShown: false}}/>
+          <Stack.Screen name="GameDetailsPage" component={GameDetailsPage} options={{headerShown: false}}/>
+          <Stack.Screen name="TrendingList" component={TrendingList} options={{headerShown: false}}/>
+          <Stack.Screen name="RecomendationsList" component={RecomendationsList} options={{headerShown: false}}/>
         </Stack.Navigator>
       </NavigationContainer>
     </ModelProvider>
