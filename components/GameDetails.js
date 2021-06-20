@@ -54,20 +54,20 @@ const GameDetails = observer(({ gameDetails }) => {
       <View>
         <TouchableOpacity onPress={() => model.toggleFavorite(gameDetails.name)}>
           <Entypo
-            name={model.favorites.has(gameDetails.name) ? "star" : "star-outlined"}
+            name={model.favorites.has(gameDetails.name) ? "heart" : "heart-outlined"}
             size={24}
-            color="black"
+            color="#E6FF2E"
           />
         </TouchableOpacity>
-        <Text style={styles.name}>{gameDetails.name}</Text>
-        <Text style={styles.name}>{gameDetails.released}</Text>
+        <Text style={styles.platforms}>{gameDetails.name}</Text>
+        <Text style={styles.date}>{gameDetails.released}</Text>
         <Image
           style={styles.image}
           source={{ uri: gameDetails.background_image }}
         />
-        <Text style={styles.name}>{gameDetails.rating} / 5</Text>
-        <Text style={styles.name}>{gameGenres}</Text>
-        <Text style={styles.name}>{gamePlatforms}</Text>
+        <Text style={styles.score}>Score: {gameDetails.rating} / 5</Text>
+        <Text style={styles.genres}>Genres: {gameGenres}</Text>
+        <Text style={styles.platforms}>{gamePlatforms}</Text>
         {userList.map((user) => (
           <Comment
             user={user}

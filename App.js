@@ -9,11 +9,16 @@ import TrendingList from "./screens/TrendingList";
 import RecomendationsList from "./screens/RecomendationsList";
 import GameDetailsPage from "./screens/GameDetailsPage";
 import MainMenu from "./screens/MainMenu";
+import { useFonts } from "expo-font";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 export default function App() {
+  const [loaded, error] = useFonts({
+    "Montserrat-Regular": require("./assets/fonts/Montserrat-Regular.ttf"),
+    "Montserrat-Black": require("./assets/fonts/Montserrat-Black.ttf"),
+  });
   return (
 
     <ModelProvider>

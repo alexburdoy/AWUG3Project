@@ -46,22 +46,23 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "Montserrat-Black",
     color: textPrimary,
   },
   email: {
     flex: 1,
-    fontSize: 14,
-    fontFamily: "monospace",
+    fontSize: 11,
+    fontFamily: "Montserrat-Black",
     color: textSecondary,
   },
   commentTitle: {
     fontSize: 16,
-    fontWeight: "bold",
+    fontFamily: "Montserrat-Black",
     color: "#00FF6F",
   },
   commentText: {
     fontSize: 16,
+    fontFamily: "Montserrat-Regular",
     color: textTertiary,
   },
 });

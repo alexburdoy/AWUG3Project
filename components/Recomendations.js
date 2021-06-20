@@ -10,13 +10,13 @@ const Recomendations = observer(({ recomendations }) => {
   return (
     <View style={styles.person}>
       <View>
-      <Text style={styles.name}>{recomendations.name}</Text>
+      <Text style={styles.date}>{recomendations.name}</Text>
       </View>
       <TouchableOpacity onPress={() => model.toggleFavorite(recomendations.name)}>
         <Entypo
-          name={model.favorites.has(recomendations.name) ? "star" : "star-outlined"}
+          name={model.favorites.has(recomendations.name) ? "heart" : "heart-outlined"}
           size={24}
-          color="black"
+          color="#E6FF2E"
         />
       </TouchableOpacity>
     </View>

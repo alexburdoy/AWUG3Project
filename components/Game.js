@@ -23,20 +23,20 @@ const Game = observer(({ game }) => {
 
       <TouchableOpacity onPress={() => model.toggleFavorite(game.name)}>
         <Entypo
-          name={model.favorites.has(game.name) ? "star" : "star-outlined"}
+          name={model.favorites.has(game.name) ? "heart" : "heart-outlined"}
           size={24}
-          color="black"
+          color="#E6FF2E"
         />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => apreta()}>
 
         <View>
-          <Text style={styles.name}>{game.name}</Text>
-          <Text>
-            <Text style={styles.label}>Release date:</Text> {game.released}
+          <Text style={styles.platforms}>{game.name}</Text>
+          <Text style={styles.platforms}>
+            <Text style={styles.date}>Release date: </Text> {game.released}
           </Text>
-          <Text>
-            <Text style={styles.label}>Genres:</Text>{game.genres[0].name}
+          <Text style={styles.platforms}>
+            <Text style={styles.date}>Genres: </Text>{game.genres[0].name}
           </Text>
         </View>
       </TouchableOpacity>
