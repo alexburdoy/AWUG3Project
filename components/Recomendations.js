@@ -11,7 +11,7 @@ const Recomendations = observer(({ recomendations }) => {
   const navigation = useNavigation();
   
   function apreta() {
-    //model.getName(recomendations.name);
+    model.getName(recomendations.name);
     navigation.navigate("GameDetailsPage");
   }
   

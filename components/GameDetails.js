@@ -18,6 +18,11 @@ const GameDetails = observer(({ gameDetails }) => {
     setUserList(json.results);
   };
 
+  function apreta() {
+    model.getName(gameDetails.name);
+    model.toggleFavorite(gameDetails.name)
+  }
+
   useEffect(() => {
     loadUsers();
   }, []);
@@ -52,7 +57,7 @@ const GameDetails = observer(({ gameDetails }) => {
   return (
     <View style={styles.person}>
       <View>
-        <TouchableOpacity onPress={() => model.toggleFavorite(gameDetails.name)}>
+        <TouchableOpacity onPress={() => apreta()}>
           <Entypo
             name={model.favorites.has(gameDetails.name) ? "heart" : "heart-outlined"}
             size={24}

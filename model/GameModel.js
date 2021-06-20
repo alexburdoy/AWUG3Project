@@ -90,13 +90,13 @@ class GameModel {
     return [...favGenres];
   }
 
-  async loadAllGames() {//Mostrar tots els jocs per pagina
+  async loadAllGames() {//Mostrar jocs aleatoriament en base a la API
     const response = await fetch(`https://api.rawg.io/api/games?key=511084e1f425491089c17b0d2c21354a`);
     const json = await response.json();
     this.setAllGames(json.results);
   }
 
-  async loadTrending() {//Mostra els 4 en trending (falta crear una consulta per trending sino simplement agafem els 4 que primer surtin)
+  async loadTrending() {//Mostra els 4 en trending
     const response = await fetch(`https://api.rawg.io/api/games?key=511084e1f425491089c17b0d2c21354a&page_size=4`);
     const json = await response.json();
     this.setTrending(json.results);
@@ -108,7 +108,7 @@ class GameModel {
     this.setRecomendations(json.results);
   }
 
-  async loadDetails() {
+  async loadDetails() { //Carrega els detalls del joc triat
     const response = await fetch(`https://api.rawg.io/api/games?key=511084e1f425491089c17b0d2c21354a&search=${this.gameName}&page_size=1`);
     const json = await response.json();
     this.setDetails(json.results);
