@@ -102,8 +102,8 @@ class GameModel {
     this.setTrending(json.results);
   }
 
-  async loadRecomendations() {//Mostra recomanacions en base als generes dels jocs de la biblioteca
-    const response = await fetch(`https://api.rawg.io/api/games?key=511084e1f425491089c17b0d2c21354a&page_size=0`);
+  async loadRecomendations() {//Mostra recomanacions de jocs en base al nome de l'ultim joc cercat
+    const response = await fetch(`https://api.rawg.io/api/games?key=511084e1f425491089c17b0d2c21354a&search=${this.gameName}`);
     const json = await response.json();
     this.setRecomendations(json.results);
   }

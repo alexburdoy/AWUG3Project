@@ -10,11 +10,23 @@ import { useNavigation } from '@react-navigation/native';
 const Game = observer(({ game }) => {
   const model = useContext(ModelContext);
   const navigation = useNavigation();
+  let gameGenres = "";
   //Aqui hem de trobar la forma que a la linia 18 mostri tots els generes que te un joc. Tenen 1 o 2. Si es cambia el 0 per un 1 pot petar perque algu nno en tingui 2
 
   function apreta(){
     model.getName(game.name);
     navigation.navigate('GameDetailsPage');
+  }
+
+  for (let index = 0; index < game.genres.length; index++) {
+    //console.log(game.genres[index].name);
+    if (index == game.genres.length - 1) {
+      gameGenres += game.genres[index].name;
+    } else {
+      gameGenres += game.genres[index].name + ", ";
+    }
+    /*console.log("prova");
+    <Text>{game.genres[index].name}</Text>*/
   }
 
   return (
@@ -36,7 +48,7 @@ const Game = observer(({ game }) => {
             <Text style={styles.date}>Release date: </Text> {game.released}
           </Text>
           <Text style={styles.platforms}>
-            <Text style={styles.date}>Genres: </Text>{game.genres[0].name}
+            <Text style={styles.date}>Genres: {gameGenres}</Text>
           </Text>
         </View>
       </TouchableOpacity>

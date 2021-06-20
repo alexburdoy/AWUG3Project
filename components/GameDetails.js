@@ -45,7 +45,7 @@ const GameDetails = observer(({ gameDetails }) => {
     <Text>{gameDetails.genres[index].name}</Text>*/
   }
 
-  console.log(gamePlatforms);
+  //console.log(gamePlatforms);
 
   //console.log(gameGenres);
 
