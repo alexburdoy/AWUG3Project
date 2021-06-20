@@ -1,12 +1,14 @@
 import { Ionicons } from "@expo/vector-icons";
 import { observer } from "mobx-react";
 import React, { useContext, useEffect } from "react";
-import { ActivityIndicator, FlatList, Button, View } from "react-native";
+import { ActivityIndicator, FlatList, View } from "react-native";
 import { color } from "react-native-reanimated";
 import Game from "../components/Game";
 import { ModelContext } from "../model/GameModel";
 import styles from "../styles";
 import { useNavigation } from "@react-navigation/native";
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Button } from 'react-native-elements';
 
 const GameList = observer(() => {
   const model = useContext(ModelContext);
@@ -31,7 +33,17 @@ const GameList = observer(() => {
 
   return (
     <View style={styles.page}>
-      <Button onPress={anarMenu} title="Go Menu"></Button>
+      <Button
+        onPress={anarMenu}
+        icon={
+          <Icon
+            name="arrow-left"
+            size={15}
+            color="white"
+          />
+        }
+        title="Menú"
+      />
       <FlatList
         data={model.games}
         keyExtractor={(item) => item.url}

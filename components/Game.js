@@ -1,7 +1,7 @@
 import { Entypo } from "@expo/vector-icons";
 import { observer } from "mobx-react";
 import React, { useContext } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View,Image } from "react-native";
 import { ModelContext } from "../model/GameModel";
 import styles from "../styles";
 import { useNavigation } from '@react-navigation/native';
@@ -32,17 +32,17 @@ const Game = observer(({ game }) => {
   return (
 
     <View style={styles.person}>
+      <View style={styles.gameContainer}>
 
       <TouchableOpacity onPress={() => model.toggleFavorite(game.name)}>
-        <Entypo
-          name={model.favorites.has(game.name) ? "heart" : "heart-outlined"}
-          size={24}
-          color="#E6FF2E"
-        />
+        
       </TouchableOpacity>
       <TouchableOpacity onPress={() => apreta()}>
-
-        <View>
+      <Image
+            style={styles.bgImage}
+            source={{ uri: game.background_image }}
+          />
+        <View style={styles.game}>
           <Text style={styles.platforms}>{game.name}</Text>
           <Text style={styles.platforms}>
             <Text style={styles.date}>Release date: </Text> {game.released}
@@ -51,8 +51,21 @@ const Game = observer(({ game }) => {
             <Text style={styles.date}>Genres: {gameGenres}</Text>
           </Text>
         </View>
+        <Entypo
+          name={model.favorites.has(game.name) ? "heart" : "heart-outlined"}
+          size={24}
+          color="#E6FF2E"
+          style={{
+            position:'absolute',
+            top:10,
+            right:10
+          }}
+        />
       </TouchableOpacity>
+      </View>
     </View>
+
+    
   );
 
 

@@ -44,7 +44,7 @@ export default StyleSheet.create({
     backgroundColor: "#220338",
   },
   gameContainer:{
-    width:200,
+    width:300,
     
   },
   person: {
@@ -71,9 +71,12 @@ export default StyleSheet.create({
   },
   name: {
     fontFamily: "Montserrat-Black",
-    position: "absolute",
-    bottom:10,
-    left:2,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    
     color:'#E6FF2E'
   },
   label: {
@@ -84,20 +87,36 @@ export default StyleSheet.create({
     width: 300,
   },
   bgImage: {
-    height: 200,
-    width: 200,
+    height: 300,
+    width: 300,
+    borderRadius: 30,
+    backgroundColor: 'rgba(52, 52, 52, 0.8)',
+  },
+  bgImageRecommendation: {
+    height: 150,
+    width: 300,
     borderRadius: 30,
     backgroundColor: 'rgba(52, 52, 52, 0.8)',
   },
   game:{
     backgroundColor: "rgba(146,0,250,0.25)",
     position: 'absolute',
-    height:200,
-    width:200,
+    height:300,
+    width:300,
     borderRadius:30,
     justifyContent: "center",
     alignItems: "center",
-    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  gameRecommendation:{
+    backgroundColor: "rgba(146,0,250,0.25)",
+    position: 'absolute',
+    height:150,
+    width:300,
+    borderRadius:30,
+    justifyContent: "center",
+    alignItems: "center",
     alignItems: "center",
     justifyContent: "center",
   },

@@ -25,7 +25,7 @@ const Trending = observer(({ trending }) => {
               source={{ uri: trending.background_image }}
             />
             <View style={styles.game}>
-              <Text style={styles.name}>{trending.name}</Text>
+              
             </View>
           </TouchableOpacity>
       </View>
