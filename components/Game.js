@@ -39,10 +39,10 @@ const Game = observer(({ game }) => {
       </TouchableOpacity>
       <TouchableOpacity onPress={() => apreta()}>
       <Image
-            style={styles.bgImage}
+            style={styles.bgImage2}
             source={{ uri: game.background_image }}
           />
-        <View style={styles.game}>
+        <View style={styles.game2}>
           <Text style={styles.platforms}>{game.name}</Text>
           <Text style={styles.platforms}>
             <Text style={styles.date}>Release date: </Text> {game.released}

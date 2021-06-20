@@ -45,6 +45,8 @@ export default StyleSheet.create({
   },
   gameContainer:{
     width:300,
+    alignContent:'center',
+    alignItems:'center'
     
   },
   person: {
@@ -92,6 +94,12 @@ export default StyleSheet.create({
     borderRadius: 30,
     backgroundColor: 'rgba(52, 52, 52, 0.8)',
   },
+  bgImage2: {
+    height: 200,
+    width: 200,
+    borderRadius: 30,
+    backgroundColor: 'rgba(52, 52, 52, 0.8)',
+  },
   bgImageRecommendation: {
     height: 150,
     width: 300,
@@ -103,6 +111,17 @@ export default StyleSheet.create({
     position: 'absolute',
     height:300,
     width:300,
+    borderRadius:30,
+    justifyContent: "center",
+    alignItems: "center",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  game2:{
+    backgroundColor: "rgba(146,0,250,0.25)",
+    position: 'absolute',
+    height:200,
+    width:200,
     borderRadius:30,
     justifyContent: "center",
     alignItems: "center",
